@@ -9,6 +9,38 @@
     <script src="libs/backbone.js"></script>
   </head>
   <body>
+    <div id="content"></div>
+
     <script src="index.js"></script>
+
+    <script type="x-handlebars-template" id="contents-template">
+      {{#each chapter}}
+        <div class="chapter">
+          <div class="page">
+            <a href="#page/{{ page }}">{{ page }}</a>
+          </div>
+          <div class="title">{{ title }}</div>
+        </div>
+      {{/each}}
+    </script>
+
+    <script type="x-handlebars-template" id="page-template">
+      {{#each paragraphs}}
+        <div class="content">
+          <div class="paragraphs">{{ this }}</div>
+        </div>
+      {{/each}}
+      {{#each links}}
+        <div class="links">
+          <div class="page">
+            <a href="#page/{{ page }}"{{ page }}</a>
+          </div>
+          <div class="sentence">{{ sentence }}</div>
+        </div>
+        <div class="back">
+          <a href="#">Back to the beginning</a>
+        </div>
+      {{/each}}
+    </script>
   </body>
 </html>
