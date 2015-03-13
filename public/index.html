@@ -7,6 +7,10 @@
     <script src="libs/jquery.js"></script>
     <script src="libs/handlebars.js"></script>
     <script src="libs/backbone.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+
+    <link href="index.css" rel="stylesheet" />
   </head>
   <body>
     <div id="content"></div>
@@ -26,9 +30,7 @@
 
     <script type="x-handlebars-template" id="page-template">
       {{#each paragraphs}}
-        <div class="content">
           <div class="paragraphs">{{ this }}</div>
-        </div>
       {{/each}}
       {{#each links}}
         <div class="links">
@@ -37,10 +39,10 @@
           </div>
           <div class="sentence">{{ sentence }}</div>
         </div>
-        <div class="back">
-          <a href="#">Back to the beginning</a>
-        </div>
       {{/each}}
+      <div class="back">
+          <a href="#">Back to the beginning</a>
+      </div>
     </script>
   </body>
 </html>
